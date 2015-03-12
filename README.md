@@ -6,6 +6,7 @@ This folder contains example plugins for CKFinder 3.x.
 Plugins list
 ------------
 
+* AlterCommand - Plugin that alters command sent to server connector.
 * CustomButton - Plugin that illustrates how to add a toolbar button with custom icon.
 * FolderInfo - Plugin that alters rename file dialog view.
 * OverwriteFile - Plugin which displays folder information in files pane and uses language files.
