@@ -6,6 +6,7 @@ This folder contains example plugins for CKFinder 3.x.
 Plugins list
 ------------
 
+* ACLInfo - Plugin that add ACL information to folder's label in folders tree.
 * AlterCommand - Plugin that alters command sent to server connector.
 * CustomButton - Plugin that illustrates how to add a toolbar button with custom icon.
 * FolderInfo - Plugin that alters rename file dialog view.
