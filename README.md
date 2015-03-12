@@ -3,6 +3,11 @@ CKFinder 3.0 Plugins
 
 This folder contains example plugins for CKFinder 3.x.
 
+Plugins list
+------------
+
+* StatusBarInfo - Example plugin that illustrates Status Bar usage.
+
 Creating plugins
 ----------------
 
