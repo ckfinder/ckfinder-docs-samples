@@ -6,7 +6,8 @@ This folder contains example plugins for CKFinder 3.x.
 Plugins list
 ------------
 
-* StatusBarInfo - Example plugin that illustrates Status Bar usage.
+* CustomButton - Plugin that illustrates how to add a toolbar button with custom icon.
+* StatusBarInfo - Plugin that illustrates Status Bar usage.
 
 Creating plugins
 ----------------
