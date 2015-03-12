@@ -28,3 +28,7 @@ Template file for plugin:
 
 		return MyPlugin;
 	} );
+
+License
+-------
+For license details see: [LICENSE.md](https://github.com/ckfinder/ckfinder-docs-samples/blob/master/LICENSE.md).
