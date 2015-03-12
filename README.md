@@ -26,6 +26,8 @@ Creating plugins
 Template file for plugin:
 -------------------------
 
+```js
+
 	CKFinder.define( function () {
 
 		var MyPlugin = {
@@ -39,6 +41,8 @@ Template file for plugin:
 
 		return MyPlugin;
 	} );
+
+```
 
 License
 -------
