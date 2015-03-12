@@ -11,6 +11,7 @@ Plugins list
 * CustomButton - Plugin that illustrates how to add a toolbar button with custom icon.
 * FolderInfo - Plugin that alters rename file dialog view.
 * OverwriteFile - Plugin which displays folder information in files pane and uses language files.
+* SettingsDemo - Plugin that adds all settings data types to settings panel.
 * StatusBarInfo - Plugin that illustrates Status Bar usage.
 
 Creating plugins
