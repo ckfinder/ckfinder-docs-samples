@@ -21,7 +21,7 @@ Creating plugins
   * For instance plugin `MyPlugin` must be placed inside `plugins/MyPlugin/MyPlugin.js` file.
 * If plugin is intended to be loaded from different location above rule does not apply but is considered a good practice.
 * Plugins must be properly loaded by require.js AMD loader.
-* Inside plugin's folder may exists other folders or files, for instance plugin might be divided to AMD modules.
+* Inside plugins folder may exists other folders or files, for instance plugin might be divided to AMD modules.
 
 Template file for plugin:
 -------------------------

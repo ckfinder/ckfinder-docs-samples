@@ -1,0 +1,18 @@
+{
+	"immed": true,
+	"latedef": "nofunc",
+	"noarg": true,
+	"nonbsp": true,
+	"undef": true,
+	"unused": true,
+	"strict": true,
+	"globalstrict": true,
+	"browser": true,
+
+	"globals": {
+		"CKFinder": false,
+		"define": false,
+		"require": false,
+		"requirejs": false
+	}
+}

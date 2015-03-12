@@ -9,7 +9,7 @@
  * modifying or distribute this file or part of its contents.
  */
 
-CKFinder.define( [ 'underscore' ], function( _ ) {
+CKFinder.define( function( ) {
 	'use strict';
 
 	/**
