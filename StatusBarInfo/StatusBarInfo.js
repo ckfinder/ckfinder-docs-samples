@@ -13,11 +13,11 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 	'use strict';
 
 	/**
-	 * This plugin illustrates how to display information inside status bar.
+	 * This plugin illustrates how to show, style and add information to the Status Bar.
 	 */
 	return {
 		init: function( finder ) {
-			// A basic model that stores message that will be displayed in status bar
+			// A basic model that stores message that will be displayed in the status bar
 			var messageModel = new Backbone.Model( { message: '' } );
 
 			// A view that will be displayed inside status bar
@@ -45,7 +45,7 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 					name: 'MyStatusBar'
 				} );
 
-				//  Pass an view instance to status bar. This will add a view to regions layout manager.
+				//  Pass a view instance to status bar. This will add a view to regions layout manager.
 				evt.finder.request( 'statusBar:showView', {
 					region: 'my-status-bar-region',
 					name: 'MyStatusBar',
@@ -58,9 +58,12 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 
 					if ( !selectedFiles.length ) {
 						// There are no selected files so display information about folder's contents.
-						var folder = evt.finder.request( 'folder:getActive' ); // Get current folder.
-						var folderCount = evt.finder.request( 'files:getCurrent' ).length; // Get all files in current folder.
-						messageModel.set( 'message', 'Folder "' + folder.get( 'name' ) + '" contains ' + folderCount + ' files' );
+						// Get current folder.
+						var folder = evt.finder.request( 'folder:getActive' );
+						// Get all files in current folder.
+						var folderCount = evt.finder.request( 'files:getCurrent' ).length;
+						// Display an information about current folder and amount of files.
+						messageModel.set( 'message', 'Folder "' + folder.get( 'name' ) + '" contains ' + folderCount + ' file(s)' );
 					} else if ( selectedFiles.length === 1 ) {
 						// There is only one file selected so get the first file and show its name.
 						messageModel.set( 'message', 'Selected: ' + selectedFiles.at( 0 ).get( 'name' ) );
@@ -70,6 +73,9 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 					}
 				} );
 			} );
+
+			// Set some nicer styles for status bar content.
+			this.addCss( '#my-status-bar-region {padding: 0 1em;font-size:0.8em;font-weight:normal}' );
 		}
 	};
 } );

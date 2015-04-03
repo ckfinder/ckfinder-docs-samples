@@ -9,7 +9,7 @@ CKFinder.define( function() {
 	return {
 		name: 'FolderInfo',
 		values: {
-			title: 'Informacje o folderze'
+			title: 'Aktualny folder: %1'
 		}
 	};
 } );

@@ -13,11 +13,13 @@ CKFinder.define( [ 'underscore' ], function( _ ) {
 	'use strict';
 
 	/**
-	 * A simple plugin that illustrates how to alter commands sent to server.
+	 * A simple plugin that illustrates how to alter commands sent to the server connector.
 	 */
 	var AlterCommand = {
 		init: function( finder ) {
-			// This will alter every command sent to server
+			// The 'command:before' event is fired before sending any command to the server via ajax request.
+			// 'params' holds the data which will be sent to the server connector.
+			// See http://docs.cksource.com/ckfinder3/#!/api/CKFinder.CKFinderApp-event-command_before
 			finder.on( 'command:before', function( evt ) {
 				if ( !_.has( evt.data, 'params' ) ) {
 					evt.data.params = {};

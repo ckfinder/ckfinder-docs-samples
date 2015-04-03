@@ -13,13 +13,20 @@ CKFinder.define( function( ) {
 	'use strict';
 
 	/**
-	 * This plugin display folder's ACL data in folders tree panel.
+	 * This plugin displays folder's ACL data in the folders tree panel.
+	 *
+	 * It illustrates how to modify templates used by CKFinder to render various parts of the application.
 	 */
 	var ACLInfo = {
 		init: function( finder ) {
+			// Register listener for the template:NAME event.
 			finder.on( 'template:FolderTreeNode', function( evt ) {
+
+				// Get access to the original template.
 				var originalTemplate = evt.data.template;
 
+				// In the FolderTreeNode template "it" holds an instance of CKFinder.Models.Folder
+				// which gives us access to the acl property.
 				var aclLabel = '{{! it.label || it.name }} <span style="font-size: 0.7em;color:#aaa;">' +
 					'|' +
 					'{{? it.acl.folderView }}V{{??}}_{{?}}' +
@@ -36,6 +43,7 @@ CKFinder.define( function( ) {
 					'{{? it.acl.imageScaleCustom }}C{{??}}_{{?}}' +
 					'|</span>';
 
+				// Append our extra information to the original template.
 				evt.data.template = originalTemplate.replace( '{{! it.label || it.name }}', aclLabel );
 			} );
 		}

@@ -13,7 +13,7 @@ CKFinder.define( function() {
 	'use strict';
 
 	/**
-	 * Plugin that adds all settings data types to settings panel.
+	 * Plugin that adds all possible types of settings to the Settings Panel.
 	 */
 	var SettingsDemo = {
 		init: function settingsDataTypes( finder ) {
@@ -23,25 +23,25 @@ CKFinder.define( function() {
 				/* global console: true */
 			}
 
-			finder.on( 'setting:change:hacks:checkbox', logChange );
-			finder.on( 'setting:change:hacks:range', logChange );
-			finder.on( 'setting:change:hacks:text', logChange );
-			finder.on( 'setting:change:hacks:select', logChange );
-			finder.on( 'setting:change:hacks:radio', logChange );
+			finder.on( 'setting:change:mySettings:checkbox1', logChange );
+			finder.on( 'setting:change:mySettings:range1', logChange );
+			finder.on( 'setting:change:mySettings:text1', logChange );
+			finder.on( 'setting:change:mySettings:select1', logChange );
+			finder.on( 'setting:change:mySettings:radio1', logChange );
 
 			finder.on( 'app:loaded', function() {
 				finder.request( 'settings:define', {
-					group: 'hacks',
+					group: 'mySettings',
 					label: 'Settings demo',
 					settings: [
 						{
-							label: 'Checkbox',
-							name: 'checkbox',
+							label: 'My Checkbox',
+							name: 'checkbox1',
 							type: 'checkbox'
 						},
 						{
-							label: 'Range',
-							name: 'range',
+							label: 'My Range',
+							name: 'range1',
 							type: 'range',
 							defaultValue: 6,
 							attributes: {
@@ -51,19 +51,19 @@ CKFinder.define( function() {
 							}
 						},
 						{
-							label: 'Text',
-							name: 'text',
+							label: 'My Text',
+							name: 'text1',
 							defaultValue: 'Text input'
 						},
 						{
-							label: 'Hidden',
-							name: 'hidden',
+							label: 'My Hidden',
+							name: 'hidden1',
 							type: 'hidden',
 							defaultValue: 'Must not render'
 						},
 						{
-							label: 'Select',
-							name: 'select',
+							label: 'My Select',
+							name: 'select1',
 							type: 'select',
 							defaultValue: 'b',
 							attributes: {
@@ -75,8 +75,8 @@ CKFinder.define( function() {
 							}
 						},
 						{
-							label: 'Radio',
-							name: 'radio',
+							label: 'My Radio',
+							name: 'radio1',
 							type: 'radio',
 							defaultValue: 'a',
 							attributes: {
