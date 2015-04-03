@@ -9,6 +9,7 @@ Loading plugins
 ---------------
 
 To run the sample plugins:
+
 1. Download the sample plugins and extract them to `<ckfinder>/plugins` folder. You can download plugins:
  - using `git`,
  - by pressing the [Download ZIP](https://github.com/ckfinder/ckfinder-docs-samples/archive/master.zip) button.
