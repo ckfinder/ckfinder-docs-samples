@@ -1,7 +1,7 @@
-CKFinder 3.0 Plugins
-====================
+CKFinder 3 - Sample Plugins
+===========================
 
-This folder contains example plugins for CKFinder 3.x. To lear more about creating plugins visit [CKFinder documentation](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins).
+This folder contains example plugins for CKFinder 3. To learn more about creating plugins visit [CKFinder documentation](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins).
 
 Plugins list
 ------------
