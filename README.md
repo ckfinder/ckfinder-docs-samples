@@ -18,8 +18,10 @@ To run the sample plugins:
 #### Example
 
 ```js
+<script src="/ckfinder/ckfinder.js"></script>
+<div id="ckfinder1"></div>
 <script>
-	CKFinder.widget( 'ckfinder-widget', {
+	CKFinder.widget( 'ckfinder1', {
 		width: 800,
 		height: 700,
 		plugins: [
@@ -32,8 +34,10 @@ To run the sample plugins:
 Note: as it's possible in CKFinder 3 to load plugins from URL, you can point your CKFinder straight to the plugin on GitHub!
 
 ```js
+<script src="/ckfinder/ckfinder.js"></script>
+<div id="ckfinder1"></div>
 <script>
-	CKFinder.widget( 'ckfinder-widget', {
+	CKFinder.widget( 'ckfinder1', {
 		width: 800,
 		height: 700,
 		plugins: [
