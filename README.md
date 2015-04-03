@@ -1,7 +1,46 @@
 CKFinder 3 - Sample Plugins
 ===========================
 
-This folder contains example plugins for CKFinder 3. To learn more about creating plugins visit [CKFinder documentation](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins).
+This folder contains example plugins for CKFinder 3. 
+
+To learn about writing own plugins, read the [Creating Plugins](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins) article in CKFinder 3 documentation.
+
+Loading plugins
+---------------
+
+To run the sample plugins:
+1. Download the sample plugins and extract them to `<ckfinder>/plugins` folder. You can download plugins:
+ - using `git`,
+ - by pressing the [Download ZIP](https://github.com/ckfinder/ckfinder-docs-samples/archive/master.zip) button.
+2. Enable selected plugins with [config.plugins](http://docs.cksource.com/ckfinder3/#!/api/CKFinder.Config-cfg-plugins)
+
+#### Example
+
+```js
+<script>
+	CKFinder.widget( 'ckfinder-widget', {
+		width: 800,
+		height: 700,
+		plugins: [
+			'StatusBarInfo'
+		]
+	} );
+</script>
+```
+
+Note: as it's possible in CKFinder 3 to load plugins from URL, you can point your CKFinder straight to the plugin on GitHub!
+
+```js
+<script>
+	CKFinder.widget( 'ckfinder-widget', {
+		width: 800,
+		height: 700,
+		plugins: [
+			'https://raw.githubusercontent.com/ckfinder/ckfinder-docs-samples/master/StatusBarInfo/StatusBarInfo.js'
+		]
+	} );
+</script>
+```
 
 Plugins list
 ------------
