@@ -79,6 +79,16 @@ Plugin that illustrates how to:
 * Add a context menu item.
 * Add a toolbar button.
 
+### CustomPage
+
+Sample plugin which adds a button that opens a separate page with its own toolbar, inside CKFinder.
+
+This plugin illustrates how to:
+
+ * Add a button to the main toolbar.
+ * Create own toolbar and add a button to it.
+ * Create, show and close own page and render a view (custom HTML) inside.
+
 ### FolderInfo
 
 Sample plugin which displays folder information in the files pane.
