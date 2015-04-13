@@ -49,8 +49,8 @@ CKFinder.define( function() {
 
 			function sendFeedback() {
 				finder.request( 'dialog:info', {
-                    msg: 'If you have any comments or suggestions, please <a href="http://cksource.com/contact">contact us</a>.'
-                } );
+					msg: 'If you have any comments or suggestions, please <a href="http://cksource.com/contact">contact us</a>.'
+				} );
 			}
 		}
 	};
