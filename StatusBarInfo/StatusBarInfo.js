@@ -34,19 +34,19 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 			// Wait for 'app:loaded' event so all core modules are available
 			finder.on( 'app:loaded', function( evt ) {
 				// Create a status bar named 'MyStatusBar' for 'main' page which contains files pane.
-				evt.finder.request( 'statusBar:create', {
+				finder.request( 'statusBar:create', {
 					name: 'MyStatusBar',
 					page: 'main'
 				} );
 
 				// Add a region inside 'MyStatusBar' status bar. By default status bar is empty.
-				evt.finder.request( 'statusBar:addRegion', {
+				finder.request( 'statusBar:addRegion', {
 					id: 'my-status-bar-region',
 					name: 'MyStatusBar'
 				} );
 
 				//  Pass a view instance to status bar. This will add a view to regions layout manager.
-				evt.finder.request( 'statusBar:showView', {
+				finder.request( 'statusBar:showView', {
 					region: 'my-status-bar-region',
 					name: 'MyStatusBar',
 					view: statusBarView
