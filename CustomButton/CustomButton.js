@@ -20,18 +20,14 @@ CKFinder.define( function() {
 	 */
 	return {
 		init: function( finder ) {
-			var iconUrl;
+			var icon = 'feedback-white.svg';
 
 			// Detect if black icon should be provided by looking for .ui-alt-icon class.
-			// To provide different icons for LTR/RTL environment check finder.lang.dir.
+			// To provide different icons for RTL/RTL environment check finder.lang.dir.
 			if ( jQuery( 'body' ).hasClass( 'ui-alt-icon' ) ) {
-				iconUrl = this.path + '/gfx/feedback-black.svg';
+				icon = 'feedback-black.svg';
 			}
-			else {
-				iconUrl = this.path + '/gfx/feedback-white.svg';
-			}
-
-			this.addCss( '.ui-icon-feedback:after { background-image: url(' + iconUrl + '); }' );
+			this.addCss( '.ui-icon-feedback:after { background-image: url(' + this.path + '/gfx/' + icon + '); }' );
 
 			// Add a button to the "Main" toolbar.
 			// See also events: toolbar:reset:Main:file, toolbar:reset:Main:files, toolbar:reset:Main:folder, toolbar:reset:Main:resources.
