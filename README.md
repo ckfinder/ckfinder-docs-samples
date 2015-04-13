@@ -79,6 +79,16 @@ Plugin that illustrates how to:
 * Add a context menu item.
 * Add a toolbar button.
 
+### CustomDialog
+
+Sample plugin which adds a "Share" button which opens a dialog window .
+
+This plugin illustrates how to:
+
+ * Create a complete, own dialog window.
+ * Add a button to the toolbar when a file is selected.
+ * Define own request handler.
+
 ### CustomPage
 
 Sample plugin which adds a button that opens a separate page with its own toolbar, inside CKFinder.
