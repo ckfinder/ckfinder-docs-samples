@@ -20,7 +20,17 @@ CKFinder.define( function() {
 	 */
 	return {
 		init: function( finder ) {
-			var iconUrl = this.path + '/gfx/feedback.svg';
+			var iconUrl;
+
+			// Detect if black icon should be provided by looking for .ui-alt-icon class.
+			// To provide different icons for LTR/RTL environment check finder.lang.dir.
+			if ( jQuery( 'body' ).hasClass( 'ui-alt-icon' ) ) {
+				iconUrl = this.path + '/gfx/feedback-black.svg';
+			}
+			else {
+				iconUrl = this.path + '/gfx/feedback-white.svg';
+			}
+
 			this.addCss( '.ui-icon-feedback:after { background-image: url(' + iconUrl + '); }' );
 
 			// Add a button to the "Main" toolbar.
