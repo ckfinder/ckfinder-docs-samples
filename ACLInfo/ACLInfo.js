@@ -21,7 +21,6 @@ CKFinder.define( function( ) {
 		init: function( finder ) {
 			// Register listener for the template:NAME event.
 			finder.on( 'template:FolderTreeNode', function( evt ) {
-
 				// Get access to the original template.
 				var originalTemplate = evt.data.template;
 
