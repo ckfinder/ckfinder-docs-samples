@@ -38,7 +38,7 @@ CKFinder.define( [ 'backbone' ], function( Backbone ) {
 				var file = evt.data.file;
 				evt.data.toolbar.push( {
 					label: 'Share',
-					// Place it after "Download"
+					// Place "Share" after "Download" button.
 					priority: 65,
 					icon: 'share',
 					action: function() {
@@ -54,23 +54,25 @@ CKFinder.define( [ 'backbone' ], function( Backbone ) {
 				finder.request( 'dialog', {
 					name: 'SampleDialog',
 					title: 'Share File',
-					template: '{{? it.msg }}<p>{{= it.msg }}</p>{{?}}{{~ it.words :word }}<label><input type="checkbox" name="service" value="{{= word }}">{{= word }}</label>{{~}}',
+					template: '{{? it.msg }}<p>{{= it.msg }}</p>{{?}}{{~ it.words :word }}' +
+							'<label><input type="checkbox" name="service" value="{{= word }}">{{= word }}</label>{{~}}',
 					templateModel: new Backbone.Model( {
 						msg: 'Where to share ' + fileName + '?',
 						words: [ 'Facebook', 'Twitter' ]
-					}),
+					} ),
 					buttons: [ 'ok', 'cancel' ]
 				} );
 
-				finder.on( 'dialog:SampleDialog:ok', function ( evt ) {
+				finder.on( 'dialog:SampleDialog:ok', function( evt ) {
 					var checked = [];
-					evt.data.view.$el.find( '[name="service"]:checked' ).each(function() {
-						checked.push( $(this).val() );
-					});
+					evt.data.view.$el.find( '[name="service"]:checked' ).each( function() {
+						checked.push( jQuery( this ).val() );
+					} );
+
 					if ( checked ) {
 						// Destroy the dialog.
 						finder.request( 'dialog:destroy' );
-						alert('Sharing on: ' + checked.join( ', ' ) );
+						alert( 'Sharing on: ' + checked.join( ', ' ) );
 					}
 				} );
 			}
