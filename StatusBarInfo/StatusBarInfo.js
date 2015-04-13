@@ -32,11 +32,11 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 			} );
 
 			// Wait for 'app:loaded' event so all core modules are available
-			finder.on( 'app:loaded', function( evt ) {
-				// Create a status bar named 'MyStatusBar' for 'main' page which contains files pane.
+			finder.on( 'app:loaded', function() {
+				// Create a status bar named 'MyStatusBar' for 'Main' page which contains files pane.
 				finder.request( 'statusBar:create', {
 					name: 'MyStatusBar',
-					page: 'main'
+					page: 'Main'
 				} );
 
 				// Add a region inside 'MyStatusBar' status bar. By default status bar is empty.

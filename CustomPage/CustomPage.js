@@ -16,7 +16,7 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 	 * Sample plugin which adds a button that opens a separate page with its own toolbar, inside CKFinder.
 	 *
 	 * This plugin illustrates how to:
-	 *  - add a button to the main toolbar,
+	 *  - add a button to the "Main" toolbar,
 	 *  - create own toolbar and add a button to it,
 	 *  - create, show and close own page and render a view (custom HTML) inside,
 	 */
@@ -24,8 +24,8 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 		init: function( finder ) {
 			var pageCreated = false;
 
-			// Adds a button to the main toolbar.
-			finder.on( 'toolbar:reset:main', function( evt ) {
+			// Adds a button to the "Main" toolbar.
+			finder.on( 'toolbar:reset:Main', function( evt ) {
 				evt.data.toolbar.push( {
 					label: 'Open Page',
 					priority: 100,

@@ -85,7 +85,7 @@ Sample plugin which adds a button that opens a separate page with its own toolba
 
 This plugin illustrates how to:
 
- * Add a button to the main toolbar.
+ * Add a button to the "Main" toolbar.
  * Create own toolbar and add a button to it.
  * Create, show and close own page and render a view (custom HTML) inside.
 

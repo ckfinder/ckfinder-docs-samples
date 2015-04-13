@@ -24,11 +24,11 @@ CKFinder.define( [ 'underscore', 'doT', 'backbone', 'marionette' ], function( _,
 		lang: 'en,pl',
 
 		init: function( finder ) {
-			finder.on( 'page:create:main', function() {
+			finder.on( 'page:create:Main', function() {
 				// http://docs.cksource.com/ckfinder3/#!/api/CKFinder.CKFinderApp-request-page_addRegion
 				finder.request( 'page:addRegion', {
-					// The page where CKFinder renders files and folders is called "main",
-					page: 'main',
+					// The page where CKFinder renders files and folders is called "Main",
+					page: 'Main',
 					// We need to name our region somehow.
 					name: 'folderInfo',
 					id: _.uniqueId( 'ckf-' )
@@ -51,7 +51,7 @@ CKFinder.define( [ 'underscore', 'doT', 'backbone', 'marionette' ], function( _,
 							name: folderName
 						} )
 					} ),
-					page: 'main',
+					page: 'Main',
 					region: 'folderInfo'
 				} );
 			} );

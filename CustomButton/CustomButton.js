@@ -23,9 +23,9 @@ CKFinder.define( function() {
 			var iconUrl = this.path + '/gfx/feedback.svg';
 			this.addCss( '.ui-icon-feedback:after { background-image: url(' + iconUrl + '); }' );
 
-			// Add a button to the main toolbar.
-			// See also events: toolbar:reset:main:file, toolbar:reset:main:files, toolbar:reset:folder, toolbar:reset:main:resources.
-			finder.on( 'toolbar:reset:main', function( evt ) {
+			// Add a button to the "Main" toolbar.
+			// See also events: toolbar:reset:Main:file, toolbar:reset:Main:files, toolbar:reset:Main:folder, toolbar:reset:Main:resources.
+			finder.on( 'toolbar:reset:Main', function( evt ) {
 				evt.data.toolbar.push( {
 					label: 'Send Feedback',
 					priority: 0,
@@ -48,7 +48,9 @@ CKFinder.define( function() {
 			} );
 
 			function sendFeedback() {
-				finder.request( 'dialog:info', { msg: 'If you have any comments or suggestions, please <a href="http://cksource.com/contact">contact us</a>.' } );
+				finder.request( 'dialog:info', {
+                    msg: 'If you have any comments or suggestions, please <a href="http://cksource.com/contact">contact us</a>.'
+                } );
 			}
 		}
 	};
