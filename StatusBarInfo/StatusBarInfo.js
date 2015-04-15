@@ -72,7 +72,19 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 						messageModel.set( 'message', 'Selected ' + selectedFiles.length + ' files' );
 					}
 				} );
+
+				finder.on( 'folder:selected', function( evt ) {
+					// There are no selected files so display information about folder's contents.
+					// Get current folder.
+					var folder = evt.finder.request( 'folder:getActive' );
+					// Get all files in current folder.
+					var folderCount = evt.finder.request( 'files:getCurrent' ).length;
+					// Display an information about current folder and amount of files.
+					messageModel.set( 'message', 'Folder "' + folder.get( 'name' ) + '" contains ' + folderCount + ' file(s)' );
+				} );
 			} );
+
+			finder.on( '' );
 
 			// Set some nicer styles for status bar content.
 			this.addCss( '#my-status-bar-region {padding: 0 1em;font-size:0.8em;font-weight:normal}' );
