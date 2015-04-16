@@ -99,6 +99,18 @@ This plugin illustrates how to:
  * Create own toolbar and add a button to it.
  * Create, show and close own page and render a view (custom HTML) inside.
 
+### CustomPanel
+
+Sample plugin which adds a button that opens a secondary panel with a textarea element where user
+can add comments to files.
+
+This plugin illustrates how to:
+
+ * Create, open and close own panel.
+ * Get a value of an element inside a panel.
+ * Add a button to the toolbar when a file is selected.
+ * Define own request handler.
+
 ### FolderInfo
 
 Sample plugin which displays folder information in the files pane.
