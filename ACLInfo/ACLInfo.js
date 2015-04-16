@@ -1,10 +1,10 @@
 /*
- * CKFinder
- * ========
+ * CKFinder - Sample Plugins
+ * =========================
  * http://cksource.com/ckfinder
  * Copyright (C) 2007-2015, CKSource - Frederico Knabben. All rights reserved.
  *
- * The software, this file and its contents are subject to the MIT License.
+ * This file and its contents are subject to the MIT License.
  * Please read the LICENSE.md file before using, installing, copying,
  * modifying or distribute this file or part of its contents.
  */
