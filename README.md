@@ -1,19 +1,19 @@
 CKFinder 3 - Sample Plugins
 ===========================
 
-This folder contains example plugins for CKFinder 3. 
+This folder contains sample plugins for CKFinder 3. 
 
-To learn about writing own plugins, read the [Creating Plugins](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins) article in CKFinder 3 documentation.
+To learn about writing your own plugins, read the [Creating Plugins](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins) article in the CKFinder 3 documentation.
 
-Loading plugins
+Loading Plugins
 ---------------
 
-To run the sample plugins:
+To run sample plugins:
 
-1. Download the sample plugins and extract them to `<ckfinder>/plugins` folder. You can download plugins:
- - using `git`,
- - by pressing the [Download ZIP](https://github.com/ckfinder/ckfinder-docs-samples/archive/master.zip) button.
-2. Enable selected plugins with [config.plugins](http://docs.cksource.com/ckfinder3/#!/api/CKFinder.Config-cfg-plugins)
+1. Download sample plugins and extract them to the `<ckfinder>/plugins` folder. You can download plugins:
+ - Using `git`.
+ - By pressing the [Download ZIP](https://github.com/ckfinder/ckfinder-docs-samples/archive/master.zip) button.
+2. Enable selected plugins with the [`config.plugins`](http://docs.cksource.com/ckfinder3/#!/api/CKFinder.Config-cfg-plugins) option.
 
 #### Example
 
@@ -31,7 +31,7 @@ To run the sample plugins:
 </script>
 ```
 
-Note: as it's possible in CKFinder 3 to load plugins from URL, you can point your CKFinder straight to the plugin on GitHub!
+Note: In CKFinder 3 it is possible to load plugins from a URL, so you can point your CKFinder straight to the plugin on GitHub!
 
 ```js
 <script src="/ckfinder/ckfinder.js"></script>
@@ -47,8 +47,8 @@ Note: as it's possible in CKFinder 3 to load plugins from URL, you can point you
 </script>
 ```
 
-Plugins list
-------------
+Plugin List
+-----------
 
 ### ACLInfo
 
@@ -62,14 +62,14 @@ A simple plugin that illustrates how to alter commands sent to the server connec
 
 ### AlterDialogWindow
 
-Sample plugin that alters "Rename File" dialog view.
+Sample plugin that alters the "Rename File" dialog window.
 
 This plugin illustrates how to:
 
 * Alter existing dialog windows by overriding the default templates.
 * Read values from input elements in dialog windows.
-* Listen to dialog events (e.g. to execute code when "Ok" button is pressed).
-* Alter executed command to send additional data to the server side connector.
+* Listen to dialog events (e.g. to execute code when the "OK" button is pressed).
+* Alter executed command to send additional data to the server-side connector.
 
 ### CustomButton
 
@@ -81,35 +81,35 @@ Plugin that illustrates how to:
 
 ### CustomDialog
 
-Sample plugin which adds a "Share" button which opens a dialog window .
+Sample plugin which adds a "Share" button that opens a dialog window.
 
 This plugin illustrates how to:
 
- * Create a complete, own dialog window.
+ * Create a complete, custom dialog window.
  * Add a button to the toolbar when a file is selected.
- * Define own request handler.
+ * Define your own request handler.
 
 ### CustomPage
 
-Sample plugin which adds a button that opens a separate page with its own toolbar, inside CKFinder.
+Sample plugin which adds a button that opens a separate page with its own toolbar inside CKFinder.
 
 This plugin illustrates how to:
 
  * Add a button to the "Main" toolbar.
- * Create own toolbar and add a button to it.
- * Create, show and close own page and render a view (custom HTML) inside.
+ * Create a custom toolbar and add a button to it.
+ * Create, show and close your own page and render a view (custom HTML) inside.
 
 ### CustomPanel
 
-Sample plugin which adds a button that opens a secondary panel with a textarea element where user
+Sample plugin which adds a button that opens a secondary panel with a textarea element where the user
 can add comments to files.
 
 This plugin illustrates how to:
 
- * Create, open and close own panel.
+ * Create, open and close a custom panel.
  * Get a value of an element inside a panel.
  * Add a button to the toolbar when a file is selected.
- * Define own request handler.
+ * Define your own request handler.
 
 ### FolderInfo
 
@@ -117,7 +117,7 @@ Sample plugin which displays folder information in the files pane.
 
 This plugin illustrates how to:
 
-* Localize plugin by providing language files.
+* Localize a plugin by providing language files.
 * Render custom HTML content inside the application by providing own region and showing custom view in this region.
 
 ### SettingsDemo
@@ -128,10 +128,10 @@ Plugin that adds all possible types of settings to the Settings Panel.
 
 This plugin illustrates how to show, style and add information to the Status Bar.
 
-Creating plugins
+Creating Plugins
 ----------------
 
-To learn about creating plugins visit [CKFinder documentation](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins).
+To learn about creating plugins visit the [CKFinder documentation](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins).
 
 License
 -------
