@@ -122,7 +122,8 @@ This plugin illustrates how to:
 
 ### SettingsDemo
 
-Plugin that adds all possible types of settings to the Settings Panel.
+Plugin that adds all possible types of settings to the Settings Panel. It also illustrates on how to detect mode changes
+in CKFinder (`mobile`/`desktop`).
 
 ### StatusBarInfo
 

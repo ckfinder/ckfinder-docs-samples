@@ -42,6 +42,7 @@ CKFinder.define( function() {
 						{
 							label: 'My Range',
 							name: 'range1',
+							isEnabled: finder.request( 'getMode' ) === 'desktop',
 							type: 'range',
 							defaultValue: 6,
 							attributes: {
@@ -88,6 +89,23 @@ CKFinder.define( function() {
 						}
 					]
 				} );
+			} );
+			// Disable range element on mobile view.
+			finder.on( 'ui:resize', function( evt ) {
+				if ( evt.data.modeChanged ) {
+					if ( evt.data.mode === 'mobile' ) {
+						finder.request( 'settings:disable', {
+							group: 'mySettings',
+							name: 'range1'
+						} );
+					}
+					else {
+						finder.request( 'settings:enable', {
+							group: 'mySettings',
+							name: 'range1'
+						} );
+					}
+				}
 			} );
 		}
 	};
