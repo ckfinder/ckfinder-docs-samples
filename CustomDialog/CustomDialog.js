@@ -9,7 +9,7 @@
  * modifying or distribute this file or part of its contents.
  */
 
-CKFinder.define( [ 'backbone' ], function( Backbone ) {
+CKFinder.define( [ 'jquery', 'backbone' ], function( jQuery, Backbone ) {
 	'use strict';
 
 	/**
@@ -56,7 +56,7 @@ CKFinder.define( [ 'backbone' ], function( Backbone ) {
 					name: 'SampleDialog',
 					title: 'Share File',
 					template: '{{? it.msg }}<p>{{= it.msg }}</p>{{?}}{{~ it.words :word }}' +
-							'<label><input type="checkbox" name="service" value="{{= word }}">{{= word }}</label>{{~}}',
+					'<label><input type="checkbox" name="service" value="{{= word }}">{{= word }}</label>{{~}}',
 					templateModel: new Backbone.Model( {
 						msg: 'Where to share ' + fileName + '?',
 						words: [ 'Facebook', 'Twitter' ]

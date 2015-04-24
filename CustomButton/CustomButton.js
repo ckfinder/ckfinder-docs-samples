@@ -9,7 +9,7 @@
  * modifying or distribute this file or part of its contents.
  */
 
-CKFinder.define( function() {
+CKFinder.define( [ 'jquery' ], function( jQuery ) {
 	'use strict';
 
 	/**

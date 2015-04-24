@@ -9,7 +9,7 @@
  * modifying or distribute this file or part of its contents.
  */
 
-CKFinder.define( [ 'underscore', 'doT', 'backbone', 'marionette' ], function( _, doT, Backbone, Marionette ) {
+CKFinder.define( [ 'underscore', 'doT', 'jquery', 'backbone', 'marionette' ], function( _, doT, jQuery, Backbone, Marionette ) {
 	'use strict';
 
 	/**
