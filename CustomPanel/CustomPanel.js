@@ -41,6 +41,7 @@ CKFinder.define( [ 'underscore', 'doT', 'backbone', 'marionette' ], function( _,
 
 				var file = evt.data.file;
 				evt.data.toolbar.push( {
+					name: 'Comment',
 					label: 'Comment',
 					priority: 100,
 					icon: 'feedback',

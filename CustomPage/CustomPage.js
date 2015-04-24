@@ -27,6 +27,7 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 			// Adds a button to the "Main" toolbar.
 			finder.on( 'toolbar:reset:Main', function( evt ) {
 				evt.data.toolbar.push( {
+					name: 'myPage',
 					label: 'Open Page',
 					priority: 100,
 					icon: 'ckf-view',

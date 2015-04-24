@@ -37,6 +37,7 @@ CKFinder.define( [ 'backbone' ], function( Backbone ) {
 			finder.on( 'toolbar:reset:Main:file', function( evt ) {
 				var file = evt.data.file;
 				evt.data.toolbar.push( {
+					name: 'Share',
 					label: 'Share',
 					// Place "Share" after "Download" button.
 					priority: 65,

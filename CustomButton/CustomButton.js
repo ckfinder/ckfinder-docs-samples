@@ -33,6 +33,7 @@ CKFinder.define( function() {
 			// See also events: toolbar:reset:Main:file, toolbar:reset:Main:files, toolbar:reset:Main:folder, toolbar:reset:Main:resources.
 			finder.on( 'toolbar:reset:Main', function( evt ) {
 				evt.data.toolbar.push( {
+					name: 'Feedback',
 					label: 'Send Feedback',
 					priority: 0,
 					icon: 'feedback',
@@ -45,6 +46,7 @@ CKFinder.define( function() {
 			finder.on( 'contextMenu', function( evt ) {
 				evt.data.groups.addGroup( 'default', [
 					{
+						name: 'Feedback',
 						label: 'Send Feedback',
 						icon: 'feedback',
 						isActive: true,
