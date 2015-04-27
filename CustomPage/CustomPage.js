@@ -62,7 +62,7 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 
 				// Create a View class to be displayed in our page.
 				var MyViewClass = Marionette.ItemView.extend( {
-					template: doT.template( '<h2>{{=it.title}}</h2><button data-inline="true">Back to CKFinder</button></p>' ),
+					template: doT.template( '<h2>{{=it.title}}</h2><button data-inline="true">Back to CKFinder</button>' ),
 					// An example of handling events inside a page.
 					events: {
 						'click button': function() {
