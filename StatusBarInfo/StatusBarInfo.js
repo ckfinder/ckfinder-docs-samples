@@ -61,9 +61,9 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 						// Get current folder.
 						var folder = evt.finder.request( 'folder:getActive' );
 						// Get all files in current folder.
-						var folderCount = evt.finder.request( 'files:getCurrent' ).length;
+						var filesCount = evt.finder.request( 'files:getCurrent' ).length;
 						// Display an information about current folder and amount of files.
-						messageModel.set( 'message', 'Folder "' + folder.get( 'name' ) + '" contains ' + folderCount + ' file(s)' );
+						messageModel.set( 'message', 'Folder "' + folder.get( 'name' ) + '" contains ' + filesCount + ' file(s)' );
 					} else if ( selectedFiles.length === 1 ) {
 						// There is only one file selected so get the first file and show its name.
 						messageModel.set( 'message', 'Selected: ' + selectedFiles.at( 0 ).get( 'name' ) );
@@ -73,14 +73,12 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 					}
 				} );
 
-				finder.on( 'folder:selected', function( evt ) {
-					// There are no selected files so display information about folder's contents.
-					// Get current folder.
-					var folder = evt.finder.request( 'folder:getActive' );
+				finder.on( 'folder:getFiles:after', function( evt ) {
 					// Get all files in current folder.
-					var folderCount = evt.finder.request( 'files:getCurrent' ).length;
+					var filesCount = evt.finder.request( 'files:getCurrent' ).length;
+
 					// Display an information about current folder and amount of files.
-					messageModel.set( 'message', 'Folder "' + folder.get( 'name' ) + '" contains ' + folderCount + ' file(s)' );
+					messageModel.set( 'message', 'Folder "' + evt.data.folder.get( 'name' ) + '" contains ' + filesCount + ' file(s)' );
 				} );
 			} );
 
