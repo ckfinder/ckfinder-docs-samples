@@ -16,8 +16,8 @@ CKFinder.define( [ 'underscore', 'doT', 'backbone', 'marionette' ], function( _,
 	 * Sample plugin which displays folder information in the files pane.
 	 *
 	 * This plugin illustrates how to:
-	 *  - localize plugin by providing language files,
-	 *  - render custom HTML content inside the application by providing own region and showing custom view in this region.
+	 *  - Localize plugin by providing language files.
+	 *  - Render custom HTML content inside the application by providing a custom region and showing a custom view in this region.
 	 */
 	var FolderInfo = {
 		// Available language files. Put them into the "lang" folder of you plugin.
@@ -27,9 +27,9 @@ CKFinder.define( [ 'underscore', 'doT', 'backbone', 'marionette' ], function( _,
 			finder.on( 'page:create:Main', function() {
 				// http://docs.cksource.com/ckfinder3/#!/api/CKFinder.CKFinderApp-request-page_addRegion
 				finder.request( 'page:addRegion', {
-					// The page where CKFinder renders files and folders is called "Main",
+					// The page where CKFinder renders files and folders is called "Main".
 					page: 'Main',
-					// We need to name our region somehow.
+					// The region needs to be named.
 					name: 'folderInfo',
 					id: _.uniqueId( 'ckf-' )
 				} );

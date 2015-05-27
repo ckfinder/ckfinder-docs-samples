@@ -14,16 +14,16 @@ CKFinder.define( [ 'jquery' ], function( jQuery ) {
 
 	/**
 	 * This plugin illustrates how to:
-	 * - add a custom icon that can be used by a context menu item or a toolbar button,
-	 * - add a context menu item,
-	 * - add a toolbar button.
+	 * - Add a custom icon that can be used by a context menu item or a toolbar button.
+	 * - Add a context menu item.
+	 * - Add a toolbar button.
 	 */
 	return {
 		init: function( finder ) {
 			var icon = 'feedback-white.svg';
 
-			// Detect if black icon should be provided by looking for .ui-alt-icon class.
-			// To provide different icons for RTL/RTL environment check finder.lang.dir.
+			// Detect if the black icon should be provided by looking for .ui-alt-icon class.
+			// To provide different icons for LTR/RTL environment check finder.lang.dir.
 			if ( jQuery( 'body' ).hasClass( 'ui-alt-icon' ) ) {
 				icon = 'feedback-black.svg';
 			}

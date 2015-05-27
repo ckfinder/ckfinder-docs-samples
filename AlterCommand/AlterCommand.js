@@ -17,8 +17,8 @@ CKFinder.define( [ 'underscore' ], function( _ ) {
 	 */
 	var AlterCommand = {
 		init: function( finder ) {
-			// The 'command:before' event is fired before sending any command to the server via ajax request.
-			// 'params' holds the data which will be sent to the server connector.
+			// The 'command:before' event is fired before sending any command to the server via an Ajax request.
+			// 'params' stores the data which will be sent to the server connector.
 			// See http://docs.cksource.com/ckfinder3/#!/api/CKFinder.CKFinderApp-event-command_before
 			finder.on( 'command:before', function( evt ) {
 				if ( !_.has( evt.data, 'params' ) ) {

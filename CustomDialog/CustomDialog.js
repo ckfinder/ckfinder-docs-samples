@@ -13,20 +13,20 @@ CKFinder.define( [ 'jquery', 'backbone' ], function( jQuery, Backbone ) {
 	'use strict';
 
 	/**
-	 * Sample plugin which adds a "Share" button which opens a dialog window .
+	 * Sample plugin which adds a "Share" button that opens a dialog window.
 	 *
 	 * This plugin illustrates how to:
 	 *
-	 *  - create a complete, own dialog window,
-	 *  - add a button to the toolbar when a file is selected,
-	 *  - define own request handler.
+	 *  - Create a complete, custom dialog window.
+	 *  - Add a button to the toolbar when a file is selected.
+	 *  - Define your own request handler.
 	 */
 	return {
 		init: function( finder ) {
 			var icon = 'share-white.svg';
 
-			// Detect if black icon should be provided by looking for .ui-alt-icon class.
-			// To provide different icons for RTL/RTL environment check finder.lang.dir.
+			// Detect if the black icon should be provided by looking for .ui-alt-icon class.
+			// To provide different icons for LTR/RTL environment check finder.lang.dir.
 			if ( jQuery( 'body' ).hasClass( 'ui-alt-icon' ) ) {
 				icon = 'share-black.svg';
 			}
@@ -39,7 +39,7 @@ CKFinder.define( [ 'jquery', 'backbone' ], function( jQuery, Backbone ) {
 				evt.data.toolbar.push( {
 					name: 'Share',
 					label: 'Share',
-					// Place "Share" after "Download" button.
+					// Place "Share" after the "Download" button.
 					priority: 65,
 					icon: 'share',
 					action: function() {
@@ -49,7 +49,7 @@ CKFinder.define( [ 'jquery', 'backbone' ], function( jQuery, Backbone ) {
 			} );
 
 			function fileShare( data ) {
-				// data was passed in finder.request
+				// Data was passed in finder.request.
 				var fileName = data.file.get( 'name' );
 
 				finder.request( 'dialog', {

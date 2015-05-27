@@ -115,7 +115,7 @@ Sample plugin which displays folder information in the files pane.
 This plugin illustrates how to:
 
 * [Localize a plugin](http://docs.cksource.com/ckfinder3/#!/guide/dev_localization) by providing language files.
-* Render custom HTML content inside the application by providing own region and showing custom view in this region.
+* Render custom HTML content inside the application by providing a custom region and showing a custom view in this region.
 
 ### SettingsDemo
 

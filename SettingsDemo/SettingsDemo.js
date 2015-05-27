@@ -90,7 +90,7 @@ CKFinder.define( function() {
 					]
 				} );
 			} );
-			// Disable range element on mobile view.
+			// Disable range element in mobile view.
 			finder.on( 'ui:resize', function( evt ) {
 				if ( evt.data.modeChanged ) {
 					if ( evt.data.mode === 'mobile' ) {

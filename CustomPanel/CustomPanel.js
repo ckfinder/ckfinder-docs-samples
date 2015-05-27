@@ -14,16 +14,16 @@ CKFinder.define( [ 'underscore', 'doT', 'jquery', 'backbone', 'marionette' ], fu
 
 	/**
 	 * This plugin illustrates how to:
-	 * - add a custom panel,
-	 * - add a button to the toolbar when a file is selected,
-	 * - define own request handler.
+	 * - Add a custom panel.
+	 * - Add a button to the toolbar when a file is selected.
+	 * - Define your own request handler.
 	 */
 	return {
 		init: function( finder ) {
 			var icon = 'feedback-white.svg';
 
-			// Detect if black icon should be provided by looking for .ui-alt-icon class.
-			// To provide different icons for RTL/RTL environment check finder.lang.dir.
+			// Detect if the black icon should be provided by looking for .ui-alt-icon class.
+			// To provide different icons for LTR/RTL environment check finder.lang.dir.
 			if ( jQuery( 'body' ).hasClass( 'ui-alt-icon' ) ) {
 				icon = 'feedback-black.svg';
 			}
@@ -34,9 +34,9 @@ CKFinder.define( [ 'underscore', 'doT', 'jquery', 'backbone', 'marionette' ], fu
 			var panelPaddingDirection = finder.lang.dir == 'ltr' ? 'left' : 'right';
 			this.addCss( '.file-comment-panel .ckf-panel-contents{ padding-' + panelPaddingDirection + ':4%; }' );
 
-			// Add a button to the "Main" toolbar when file is focused.
+			// Add a button to the "Main" toolbar when the file is focused.
 			finder.on( 'toolbar:reset:Main:file', function( evt ) {
-				// But first, close the panel automatically if different file is selected.
+				// But first, close the panel automatically if a different file is selected.
 				finder.request( 'panel:close', { name: 'fileCommentPanel' } );
 
 				var file = evt.data.file;
@@ -53,7 +53,7 @@ CKFinder.define( [ 'underscore', 'doT', 'jquery', 'backbone', 'marionette' ], fu
 
 			finder.setHandler( 'fileComment', fileComment, this );
 
-			// Here we create the panel for adding comments.
+			// The panel for adding comments is created here.
 			function fileComment( data ) {
 				var commentModel = new Backbone.Model( {
 					comment: data.file.get( 'comment' ) || '',
@@ -66,7 +66,7 @@ CKFinder.define( [ 'underscore', 'doT', 'jquery', 'backbone', 'marionette' ], fu
 						'<small id="count"></small>'
 					),
 					events: {
-						// Attach events to a view, here we create a dummy characters counter.
+						// Attach events to a view, a dummy character counter is created here.
 						'keyup textarea': function( evt ) {
 							jQuery( '#count' ).html( jQuery( evt.currentTarget ).val().length );
 						}
@@ -85,15 +85,15 @@ CKFinder.define( [ 'underscore', 'doT', 'jquery', 'backbone', 'marionette' ], fu
 				} );
 
 				// "Save" the comment when closing the panel.
-				// As we simply "remember" the information in a model in this sample plugin, it will be quickly lost.
-				// Use local storage or custom server side command to keep the comment in some more persistent storage.
+				// As the information is simply remembered in the model in this sample plugin, it will be quickly lost.
+				// Use local storage or a custom server-side command to keep the comment in some more persistent storage.
 				finder.on( 'panel:close:fileCommentPanel', function() {
 					var comment = myCommentView.$el.find( '[name="comment"]' ).val();
-					// "this" points to data.file thanks to the scope object that we set in "on" method below.
+					// "this" points to data.file thanks to the scope object that is set in the "on" method below.
 					this.set( 'comment', comment );
 				}, data.file );
 
-				// We could also request panel:open, but it makes more sense to close the panel if it was already opened.
+				// You could also request panel:open, but it makes more sense to close the panel if it was already opened.
 				finder.request( 'panel:toggle', { name: 'fileCommentPanel' } );
 			}
 		}

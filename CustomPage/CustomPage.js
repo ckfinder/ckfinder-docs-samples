@@ -13,18 +13,18 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 	'use strict';
 
 	/**
-	 * Sample plugin which adds a button that opens a separate page with its own toolbar, inside CKFinder.
+	 * Sample plugin which adds a button that opens a separate page with its own toolbar inside CKFinder.
 	 *
 	 * This plugin illustrates how to:
-	 *  - add a button to the "Main" toolbar,
-	 *  - create own toolbar and add a button to it,
-	 *  - create, show and close own page and render a view (custom HTML) inside,
+	 *  - Add a button to the "Main" toolbar.
+	 *  - Create a custom toolbar and add a button to it.
+	 *  - Create, show and close your own page and render a view (custom HTML) inside.
 	 */
 	var CustomPage = {
 		init: function( finder ) {
 			var pageCreated = false;
 
-			// Adds a button to the "Main" toolbar.
+			// Add a button to the "Main" toolbar.
 			finder.on( 'toolbar:reset:Main', function( evt ) {
 				evt.data.toolbar.push( {
 					name: 'myPage',
@@ -35,15 +35,15 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 				} );
 			} );
 
-			// Creates a page.
+			// Create a page.
 			// Some actions related to page creation can be done just once.
 			function createPage() {
-				// Request creating a toolbar when page is created.
+				// Request creating a toolbar when the page is created.
 				finder.once( 'page:create:MyPage', function() {
 					finder.request( 'toolbar:create', { name: 'MyToolbar', page: 'MyPage' } );
 				} );
 
-				// Request resetting the toolbar when page is shown.
+				// Request resetting the toolbar when the page is shown.
 				finder.once( 'page:show:MyPage', function() {
 					finder.request( 'toolbar:reset', { name: 'MyToolbar' } );
 				} );
@@ -60,7 +60,7 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 					} );
 				} );
 
-				// Create a View class to be displayed in our page.
+				// Create a View class to be displayed in the page.
 				var MyViewClass = Marionette.ItemView.extend( {
 					template: doT.template( '<h2>{{=it.title}}</h2><button data-inline="true">Back to CKFinder</button>' ),
 					// An example of handling events inside a page.
@@ -71,7 +71,7 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 					}
 				} );
 
-				// Create a View instance to be rendered in our page.
+				// Create a View instance to be rendered in the page.
 				var myView = new MyViewClass( {
 					model: new Backbone.Model( { title: 'My own page' } )
 				} );
@@ -91,7 +91,7 @@ CKFinder.define( [ 'backbone', 'marionette', 'doT' ], function( Backbone, Marion
 				if ( !pageCreated ) {
 					createPage();
 				}
-				// In order to show a page, it must be created first.
+				// In order to show the page, it must be created first.
 				finder.request( 'page:show', { name: 'MyPage' } );
 			}
 		}
