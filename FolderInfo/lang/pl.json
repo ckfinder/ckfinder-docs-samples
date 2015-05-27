@@ -1,6 +1,6 @@
 {
 	"name": "FolderInfo",
 	"values": {
-		"title": "Aktualny folder: %1"
+		"title": "Folder bieżący: %1"
 	}
 }
