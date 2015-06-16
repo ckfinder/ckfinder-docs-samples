@@ -31,8 +31,8 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 				}
 			} );
 
-			// Wait for the 'app:loaded' event so all core modules are available.
-			finder.on( 'app:loaded', function() {
+			// Wait for the 'page:create:Main' event to attach the status bar
+			finder.on( 'page:create:Main', function() {
 				// Create a status bar named 'MyStatusBar' for the 'Main' page which contains the files pane.
 				finder.request( 'statusBar:create', {
 					name: 'MyStatusBar',
