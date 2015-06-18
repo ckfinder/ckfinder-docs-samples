@@ -63,10 +63,10 @@ Sample plugin that alters the "Rename File" [dialog window](http://docs.cksource
 
 This plugin illustrates how to:
 
-* Alter existing dialog windows by overriding the default templates.
-* Read values from input elements in dialog windows.
-* Listen to dialog events (e.g. to execute code when the "OK" button is pressed).
-* Alter executed command to send additional data to the server-side connector.
+ * Alter existing dialog windows by overriding the default templates.
+ * Read values from input elements in dialog windows.
+ * Listen to dialog events (e.g. to execute code when the "OK" button is pressed).
+ * Alter executed command to send additional data to the server-side connector.
 
 ### CustomButton
 
@@ -114,8 +114,17 @@ Sample plugin which displays folder information in the files pane.
 
 This plugin illustrates how to:
 
-* [Localize a plugin](http://docs.cksource.com/ckfinder3/#!/guide/dev_localization) by providing language files.
-* Render custom HTML content inside the application by providing a custom region and showing a custom view in this region.
+ * [Localize a plugin](http://docs.cksource.com/ckfinder3/#!/guide/dev_localization) by providing language files.
+ * Render custom HTML content inside the application by providing a custom region and showing a custom view in this region.
+
+### ImageInfo
+
+Sample plugin which adds a "Image Info" button that opens a dialog with basic information about an image.
+
+This plugin illustrates how to:
+
+ * Add a button to the toolbar when an image file is selected.
+ * Send a command to the server connector.
 
 ### SettingsDemo
 
