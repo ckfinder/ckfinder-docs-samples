@@ -29,7 +29,7 @@ To run sample plugins:
 </script>
 ```
 
-Note: In CKFinder 3 it is possible to load plugins from a URL, so you can point your CKFinder to the plugin using fully qualified URL. Note however that due to GitHub protection and sending files as `plain/text`, uging URLs that point directly to GitHub may not work:
+Note: In CKFinder 3 it is possible to load plugins from a URL, so you can point your CKFinder to the plugin using fully qualified URL. Due to GitHub protection, which sends files as `plain/text`, using URLs that point directly to GitHub may **not work**:
 
 ```js
 <script src="/ckfinder/ckfinder.js"></script>
