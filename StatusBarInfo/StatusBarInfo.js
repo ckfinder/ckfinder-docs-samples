@@ -36,7 +36,8 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 				// Create a status bar named 'MyStatusBar' for the 'Main' page which contains the files pane.
 				finder.request( 'statusBar:create', {
 					name: 'MyStatusBar',
-					page: 'Main'
+					page: 'Main',
+					label: 'My Status Bar'
 				} );
 
 				// Add a region inside the 'MyStatusBar' status bar. By default the status bar is empty.
