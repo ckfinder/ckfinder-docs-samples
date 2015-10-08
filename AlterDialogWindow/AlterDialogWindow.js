@@ -37,7 +37,7 @@ CKFinder.define( function() {
 			finder.on( 'dialog:RenameFile:ok', function( evt ) {
 				// Read if the checkbox is checked
 				// when the user confirms overwriting file update listenerData.
-				evt.listenerData.overwrite = evt.data.dialog.$el.find( '[name="overwrite"]' ).is( ':checked' );
+				evt.listenerData.overwrite = evt.data.view.$el.find( '[name="overwrite"]' ).is( ':checked' );
 			}, null, listenerData );
 
 			// Alters command params and adds an 'overwrite' parameter which will be passed to the server connector.
