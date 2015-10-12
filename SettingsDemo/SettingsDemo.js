@@ -29,7 +29,7 @@ CKFinder.define( function() {
 			finder.on( 'setting:change:mySettings:select1', logChange );
 			finder.on( 'setting:change:mySettings:radio1', logChange );
 
-			finder.on( 'app:loaded', function() {
+			finder.on( 'app:ready', function() {
 				finder.request( 'settings:define', {
 					group: 'mySettings',
 					label: 'Settings demo',
