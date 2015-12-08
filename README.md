@@ -76,6 +76,10 @@ Sample plugin that illustrates how to:
 * Add a [context menu](http://docs.cksource.com/ckfinder3/#!/guide/dev_contextmenu) item.
 * Add a [toolbar button](http://docs.cksource.com/ckfinder3/#!/guide/dev_toolbar).
 
+### CustomColumn
+
+Sample plugin that illustrates how to add a custom column to list view.
+
 ### CustomDialog
 
 Sample plugin which adds a "Share" button that opens a [dialog window](http://docs.cksource.com/ckfinder3/#!/guide/dev_dialogs).
