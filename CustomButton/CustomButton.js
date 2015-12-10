@@ -44,16 +44,21 @@ CKFinder.define( [ 'jquery' ], function( jQuery ) {
 			// Add a context menu item.
 			// See also events: contextMenu:file, contextMenu:folder.
 			finder.on( 'contextMenu', function( evt ) {
-				evt.data.groups.addGroup( 'default', [
-					{
-						name: 'Feedback',
-						label: 'Send Feedback',
-						icon: 'feedback',
-						isActive: true,
-						action: sendFeedback
-					}
-				] );
+				evt.data.groups.add( { name: 'default' } );
 			} );
+
+			finder.on( 'contextMenu:file:default', onContextMenuGroup );
+			finder.on( 'contextMenu:folder:default', onContextMenuGroup );
+
+			function onContextMenuGroup( evt ) {
+				evt.data.items.add( {
+					name: 'Feedback',
+					label: 'Send Feedback',
+					icon: 'feedback',
+					isActive: true,
+					action: sendFeedback
+				} );
+			}
 
 			function sendFeedback() {
 				finder.request( 'dialog:info', {

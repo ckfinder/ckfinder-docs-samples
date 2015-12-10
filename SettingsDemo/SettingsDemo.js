@@ -16,7 +16,7 @@ CKFinder.define( function() {
 	 * Plugin that adds all possible types of settings to the Settings Panel.
 	 */
 	var SettingsDemo = {
-		init: function settingsDataTypes( finder ) {
+		init: function ( finder ) {
 			function logChange( evt ) {
 				/* global console: false */
 				console.log( 'Changed setting: ', evt.data );
@@ -29,7 +29,7 @@ CKFinder.define( function() {
 			finder.on( 'setting:change:mySettings:select1', logChange );
 			finder.on( 'setting:change:mySettings:radio1', logChange );
 
-			finder.on( 'app:loaded', function() {
+			finder.on( 'app:ready', function() {
 				finder.request( 'settings:define', {
 					group: 'mySettings',
 					label: 'Settings demo',
@@ -90,6 +90,7 @@ CKFinder.define( function() {
 					]
 				} );
 			} );
+
 			// Disable range element in mobile view.
 			finder.on( 'ui:resize', function( evt ) {
 				if ( evt.data.modeChanged ) {
