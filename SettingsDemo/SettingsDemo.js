@@ -42,7 +42,7 @@ CKFinder.define( function() {
 						{
 							label: 'My Range',
 							name: 'range1',
-							isEnabled: finder.request( 'getMode' ) === 'desktop',
+							isEnabled: finder.request( 'ui:getMode' ) === 'desktop',
 							type: 'range',
 							defaultValue: 6,
 							attributes: {
