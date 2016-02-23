@@ -38,8 +38,8 @@ CKFinder.define( function( ) {
 					'{{? it.acl.fileRename }}R{{??}}_{{?}}' +
 					'{{? it.acl.fileDelete }}D{{??}}_{{?}}' +
 					'|' +
-					'{{? it.acl.imageScale }}S{{??}}_{{?}}' +
-					'{{? it.acl.imageScaleCustom }}C{{??}}_{{?}}' +
+					'{{? it.acl.imageResize }}S{{??}}_{{?}}' +
+					'{{? it.acl.imageResizeCustom }}C{{??}}_{{?}}' +
 					'|</span>';
 
 				// Append extra information to the original template.
