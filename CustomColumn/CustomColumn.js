@@ -39,36 +39,29 @@ CKFinder.define( [ 'marionette' ], function( Marionette ) {
 				} );
 			} );
 
-			// Add a view for file
+			// Add a template for file
 			finder.on( 'listView:file:column:type', function( evt ) {
-				evt.data.view = Marionette.ItemView.extend( {
-					tagName: 'td',
-					// The it variable contains file's attributes and template helpers
-					template: finder.doT.template( '{{= it.getType( it.name ) }}' ),
-					templateHelpers: {
-						getType: function( name ) {
-							var extension = name.substr( name.lastIndexOf( '.' ) + 1 ).toLowerCase();
+				evt.data.template = '<td>{{= it.getType( it.name ) }}</td>';
+				evt.data.templateHelpers = {
+					getType: function( name ) {
+						var extension = name.substr( name.lastIndexOf( '.' ) + 1 ).toLowerCase();
 
-							if ( /(jpg|jpeg|gif|png)/.test( extension ) ) {
-								return 'Image';
-							}
-
-							if ( /(doc|docx|pdf)/.test( extension ) ) {
-								return 'Document';
-							}
-
-							return 'Other';
+						if ( /(jpg|jpeg|gif|png)/.test( extension ) ) {
+							return 'Image';
 						}
+
+						if ( /(doc|docx|pdf)/.test( extension ) ) {
+							return 'Document';
+						}
+
+						return 'Other';
 					}
-				} );
+				};
 			} );
 
-			// Add a view for folder
+			// Add a template for folder
 			finder.on( 'listView:folder:column:type', function( evt ) {
-				evt.data.view = Marionette.ItemView.extend( {
-					tagName: 'td',
-					template: finder.doT.template( 'Folder' )
-				} );
+				evt.data.template = '<td>Folder</td>';
 			} );
 		}
 	};
