@@ -2,7 +2,7 @@
  * CKFinder - Sample Plugins
  * =========================
  * http://cksource.com/ckfinder
- * Copyright (C) 2007-2015, CKSource - Frederico Knabben. All rights reserved.
+ * Copyright (C) 2007-2017, CKSource - Frederico Knabben. All rights reserved.
  *
  * This file and its contents are subject to the MIT License.
  * Please read the LICENSE.md file before using, installing, copying,
