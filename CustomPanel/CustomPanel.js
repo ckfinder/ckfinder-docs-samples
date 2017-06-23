@@ -69,6 +69,12 @@ CKFinder.define( [ 'underscore', 'doT', 'jquery', 'backbone', 'marionette' ], fu
 						// Attach events to a view, a dummy character counter is created here.
 						'keyup textarea': function( evt ) {
 							jQuery( '#count' ).html( jQuery( evt.currentTarget ).val().length );
+						},
+						'keydown': function( evt ) {
+							if ( evt.keyCode === 32 ) {
+								// Don't propagate space events. CKFinder prevents space use to not scroll files pane.
+								evt.stopPropagation();
+							}
 						}
 					}
 				} );
