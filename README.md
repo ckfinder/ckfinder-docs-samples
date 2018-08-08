@@ -1,8 +1,8 @@
 # CKFinder 3 - Sample JavaScript Plugins
 
-This repository contains sample plugins for CKFinder 3 created as examples for the [CKFinder documentation](http://docs.cksource.com/ckfinder3/#!/guide).
+This repository contains sample plugins for CKFinder 3 created as examples for the [CKFinder documentation](https://ckeditor.com/docs/ckfinder/ckfinder3/).
 
-To learn about writing your own plugins, read the [Creating Plugins](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins) article in the CKFinder 3 documentation.
+To learn about writing your own plugins, read the [Creating Plugins](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_plugins) article in the CKFinder 3 documentation.
 
 ## Loading Plugins
 
@@ -11,7 +11,7 @@ To run sample plugins:
 1. Download sample plugins and extract them to the `<ckfinder>/plugins` folder. You can download plugins:
  - Using `git`.
  - By pressing the [Download ZIP](https://github.com/ckfinder/ckfinder-docs-samples/archive/master.zip) button.
-2. Enable selected plugins with the [`config.plugins`](http://docs.cksource.com/ckfinder3/#!/api/CKFinder.Config-cfg-plugins) option.
+2. Enable selected plugins with the [`config.plugins`](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/api/CKFinder.Config-cfg-plugins) option.
 
 ### Example
 
@@ -51,7 +51,7 @@ Note: In CKFinder 3 it is possible to load plugins from a URL, so you can point 
 
 Sample plugin that displays folder ACL data in the folders tree panel.
 
-It illustrates how to modify [templates](http://docs.cksource.com/ckfinder3/#!/guide/dev_templates) used by CKFinder to render various parts of the application.
+It illustrates how to modify [templates](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_templates) used by CKFinder to render various parts of the application.
 
 ### AlterCommand
 
@@ -59,7 +59,7 @@ A simple plugin that illustrates how to alter commands sent to the server connec
 
 ### AlterDialogWindow
 
-Sample plugin that alters the "Rename File" [dialog window](http://docs.cksource.com/ckfinder3/#!/guide/dev_dialogs).
+Sample plugin that alters the "Rename File" [dialog window](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_dialogs).
 
 This plugin illustrates how to:
 
@@ -73,8 +73,8 @@ This plugin illustrates how to:
 Sample plugin that illustrates how to:
 
 * Add a custom icon that can be used by a context menu item or a toolbar button.
-* Add a [context menu](http://docs.cksource.com/ckfinder3/#!/guide/dev_contextmenu) item.
-* Add a [toolbar button](http://docs.cksource.com/ckfinder3/#!/guide/dev_toolbar).
+* Add a [context menu](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_contextmenu) item.
+* Add a [toolbar button](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_toolbar).
 
 ### CustomColumn
 
@@ -82,7 +82,7 @@ Sample plugin that illustrates how to add a custom column to list view.
 
 ### CustomDialog
 
-Sample plugin which adds a "Share" button that opens a [dialog window](http://docs.cksource.com/ckfinder3/#!/guide/dev_dialogs).
+Sample plugin which adds a "Share" button that opens a [dialog window](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_dialogs).
 
 This plugin illustrates how to:
 
@@ -92,7 +92,7 @@ This plugin illustrates how to:
 
 ### CustomPage
 
-Sample plugin which adds a button that opens a separate page with its own [toolbar](http://docs.cksource.com/ckfinder3/#!/guide/dev_toolbar) inside CKFinder.
+Sample plugin which adds a button that opens a separate page with its own [toolbar](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_toolbar) inside CKFinder.
 
 This plugin illustrates how to:
 
@@ -107,7 +107,7 @@ can add comments to files.
 
 This plugin illustrates how to:
 
- * Create, open and close a [custom panel](http://docs.cksource.com/ckfinder3/#!/guide/dev_panels).
+ * Create, open and close a [custom panel](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_panels).
  * Get a value of an element inside a panel.
  * Add a button to the toolbar when a file is selected.
  * Define your own request handler.
@@ -118,7 +118,7 @@ Sample plugin which displays folder information in the files pane.
 
 This plugin illustrates how to:
 
- * [Localize a plugin](http://docs.cksource.com/ckfinder3/#!/guide/dev_localization) by providing language files.
+ * [Localize a plugin](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_localization) by providing language files.
  * Render custom HTML content inside the application by providing a custom region and showing a custom view in this region.
 
 ### ImageInfo
@@ -132,16 +132,16 @@ This plugin illustrates how to:
 
 ### SettingsDemo
 
-Plugin that adds all possible types of [settings](http://docs.cksource.com/ckfinder3/#!/guide/dev_settings) to the Settings Panel. It also illustrates on how to detect mode changes
+Plugin that adds all possible types of [settings](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_settings) to the Settings Panel. It also illustrates on how to detect mode changes
 in CKFinder (`mobile`/`desktop`).
 
 ### StatusBarInfo
 
-This plugin illustrates how to show, style and add information to the [status bar](http://docs.cksource.com/ckfinder3/#!/guide/dev_statusbar).
+This plugin illustrates how to show, style and add information to the [status bar](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_statusbar).
 
 ## Creating Plugins
 
-To learn about creating plugins visit the [CKFinder documentation](http://docs.cksource.com/ckfinder3/#!/guide/dev_plugins).
+To learn about creating plugins visit the [CKFinder documentation](https://ckeditor.com/docs/ckfinder/ckfinder3/#!/guide/dev_plugins).
 
 ## License
 
