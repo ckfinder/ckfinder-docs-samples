@@ -64,10 +64,10 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 						// Get all files in the current folder.
 						var filesCount = evt.finder.request( 'files:getCurrent' ).length;
 						// Display information about the current folder and the number of files.
-						messageModel.set( 'message', 'Folder "' + folder.get( 'name' ) + '" contains ' + filesCount + ' file(s)' );
+						messageModel.set( 'message', 'Folder "' + finder.util.escapeHtml( folder.get( 'name' ) ) + '" contains ' + filesCount + ' file(s)' );
 					} else if ( selectedFiles.length === 1 ) {
 						// There is only one file selected so get the first file and show its name.
-						messageModel.set( 'message', 'Selected: ' + selectedFiles.at( 0 ).get( 'name' ) );
+						messageModel.set( 'message', 'Selected: ' + finder.util.escapeHtml( selectedFiles.at( 0 ).get( 'name' ) ) );
 					} else {
 						// There are many files selected so display the number of selected files.
 						messageModel.set( 'message', 'Selected ' + selectedFiles.length + ' files' );
@@ -79,7 +79,7 @@ CKFinder.define( [ 'underscore', 'backbone', 'marionette', 'doT' ], function( _,
 					var filesCount = evt.finder.request( 'files:getCurrent' ).length;
 
 					// Display information about the current folder and the number of files.
-					messageModel.set( 'message', 'Folder "' + evt.data.folder.get( 'name' ) + '" contains ' + filesCount + ' file(s)' );
+					messageModel.set( 'message', 'Folder "' + finder.util.escapeHtml( evt.data.folder.get( 'name' ) ) + '" contains ' + filesCount + ' file(s)' );
 				} );
 			} );
 
