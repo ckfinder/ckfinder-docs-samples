@@ -145,4 +145,4 @@ To learn about creating plugins visit the [CKFinder documentation](https://ckedi
 
 ## License
 
-Copyright (c) 2015, CKSource - Frederico Knabben. All rights reserved. For license details see: [LICENSE.md](https://github.com/ckfinder/ckfinder-docs-samples/blob/master/LICENSE.md).
+Copyright (c) 2015, CKSource Holding sp. z o.o.. All rights reserved. For license details see: [LICENSE.md](https://github.com/ckfinder/ckfinder-docs-samples/blob/master/LICENSE.md).
